@@ -1,0 +1,14 @@
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\bin\Debug\CorretagemDeImoveis.exe.config
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\bin\Debug\CorretagemDeImoveis.exe
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\bin\Debug\CorretagemDeImoveis.pdb
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\bin\Debug\Controle.dll
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\bin\Debug\Modelo.dll
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\bin\Debug\Controle.pdb
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\bin\Debug\Modelo.pdb
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\obj\Debug\Visao.csprojResolveAssemblyReference.cache
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\obj\Debug\CorretagemDeImoveis.frmLogin.resources
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\obj\Debug\CorretagemDeImoveis.frmPrincipal.resources
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\obj\Debug\CorretagemDeImoveis.Properties.Resources.resources
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\obj\Debug\Visao.csproj.GenerateResource.Cache
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\obj\Debug\CorretagemDeImoveis.exe
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\CorretagemDeImoveis\obj\Debug\CorretagemDeImoveis.pdb
