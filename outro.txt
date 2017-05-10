@@ -1,0 +1,182 @@
+package partes;
+
+
+import conexao.Conexao;
+import execucao.CalculoPrimo;
+
+public class Servidor extends Conexao {
+
+	public static void main(String[] args) {
+		new Servidor();
+	}
+	
+	public Servidor() {
+		
+		try {
+			conectaCliente();
+			
+			String[] array;
+			String entrada = in.readLine();
+			array = entrada.split(", ");
+			Integer n1 = Integer.parseInt(array[0]);
+			Integer n2 = Integer.parseInt(array[1]);
+			CalculoPrimo calc_intervalo = new CalculoPrimo();
+			calc_intervalo.divideIntervalo(n1, n2);
+			
+			CalculoPrimo calc1 = new CalculoPrimo();
+			calc1.setN1(n1);
+			calc1.setN2(calc_intervalo.getP1());
+			
+			CalculoPrimo calc2 = new CalculoPrimo();
+			calc2.setN1(calc_intervalo.getP1()+1);
+			calc2.setN2(calc_intervalo.getP2());
+			
+			CalculoPrimo calc3 = new CalculoPrimo();
+			calc3.setN1(calc_intervalo.getP2()+1);
+			calc3.setN2(calc_intervalo.getP3());
+			
+			CalculoPrimo calc4 = new CalculoPrimo();
+			calc4.setN1(calc_intervalo.getP3()+1);
+			calc4.setN2(n2);
+			
+			Thread ter1 = new Thread(calc1);
+			Thread ter2 = new Thread(calc2);
+			Thread ter3 = new Thread(calc3);
+			Thread ter4 = new Thread(calc4);
+			
+			ter1.start();
+			ter2.start();
+			ter3.start();
+			ter4.start();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+package execucao;
+
+import java.util.ArrayList;
+
+public class CalculoPrimo implements Runnable {
+
+	private Integer n1;
+	private Integer n2;
+	private Integer p1 = 0;
+	private Integer p2 = 0;
+	private Integer p3 = 0;
+	
+
+	@Override
+	public void run() {
+		numerosPrimos(n1, n2);
+		System.out.println("Fim " + "thread id " + Thread.currentThread().getId());
+		
+	}
+
+	public ArrayList<Integer> numerosPrimos(Integer n1, Integer n2){
+	    ArrayList<Integer> arrayPrimos = new ArrayList<>();
+	    for (int i = n1; i <= n2; i++){
+	        if(ePrimo(i) && i != 1 && i != 0) 
+	        {
+	        	arrayPrimos.add(i);
+	            System.out.println(i + " é primo");
+	        }
+	    }
+	    return arrayPrimos;
+	} 
+
+
+	private boolean ePrimo(int n) {
+	    for(int i=2;i<n;i++) {
+	        if(n%i==0)
+	            return false;
+	    }
+	    return true;
+	}
+	
+	
+	public void divideIntervalo(Integer n1, Integer n2) {
+		
+		Integer intervalo = (n1-n2);
+		
+		double valor = intervalo*0.25;
+		int partInteira = (int) valor;
+		p1 = n1+partInteira;
+		
+		double valor1 = intervalo*0.50;
+		int partInteira1 = (int) valor1;
+		p2 = n1+partInteira1;
+		
+		double valor2 = intervalo*0.75;
+		int partInteira2 = (int) valor2;
+		p3 = n1+partInteira2;
+		
+	}
+	
+	
+	public Integer getN1() {
+		return n1;
+	}
+
+
+	public void setN1(Integer n1) {
+		this.n1 = n1;
+	}
+
+
+	public Integer getN2() {
+		return n2;
+	}
+
+
+	public void setN2(Integer n2) {
+		this.n2 = n2;
+	}
+
+	public Integer getP1() {
+		return p1;
+	}
+
+	public void setP1(Integer p1) {
+		this.p1 = p1;
+	}
+
+	public Integer getP2() {
+		return p2;
+	}
+
+	public void setP2(Integer p2) {
+		this.p2 = p2;
+	}
+
+	public Integer getP3() {
+		return p3;
+	}
+
+	public void setP3(Integer p3) {
+		this.p3 = p3;
+	}
+
+	
+	
+
+	
+}
