@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Cadastro de Categorias</title>
+    </h:head>
+    <h:body>
+        <p:growl id="status" showDetail="true" />
+
+        <h:form id="form">
+            Nome:<p:inputText id="nome" value="#{jogadorBean.obj.nome}" /><br/>
+            <p:commandButton id="salvar" action="#{jogadorBean.salvar}" value="Salvar" ajax="false" />
+            <p:commandButton id="buscar" action="#{jogadorBean.buscar}" value="Buscar" ajax="false" />
+            <p:commandButton id="voltar" action="index" value="Voltar" ajax="false" />
+
+            <br/>
+
+            <p:dataTable  id="jogadores" value="#{jogadorBean.jogadores}" var="obj">
+                <f:facet name="header">
+                    Jogadores Cadastradas
+                </f:facet>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Nome" />
+                    </f:facet>
+                    <h:outputText id="outDtNome" rendered="#{obj != jogadorBean.edt}" value="#{obj.nome}" />
+                    <h:inputText id="inDtNome" rendered="#{obj == jogadorBean.edt}" value="#{jogadorBean.edt.nome}" />
+                </p:column>
+                <p:column style="width: 20%">
+                    <f:facet name="header">
+                        <h:outputText value="Ações" />
+                    </f:facet>
+                    <p:commandLink id="editar" rendered="#{obj != jogadorBean.edt}" update=":form:jogadores">  
+                        <h:graphicImage value="imagens/pencil.png" />
+                        <f:setPropertyActionListener value="#{obj}" target="#{jogadorBean.edt}" />  
+                    </p:commandLink>
+                    <h:commandLink id="cancelar" action="#{jogadorBean.cancelar}" rendered="#{obj == jogadorBean.edt}">
+                        <h:graphicImage value="imagens/remove.png" />
+                    </h:commandLink>
+                    <h:commandLink id="dtSalvar" action="#{jogadorBean.salvar}" rendered="#{obj == jogadorBean.edt}">
+                        <h:graphicImage value="imagens/save.png" />
+                    </h:commandLink>
+                    <p:commandLink id="excluir" action="#{jogadorBean.excluir}" update=":form:jogadores">
+                        <h:graphicImage value="imagens/trash.png" />
+                        <f:setPropertyActionListener value="#{obj}" target="#{jogadorBean.selected}" />
+                    </p:commandLink>
+                </p:column>
+                <f:facet name="footer">
+                    &nbsp;
+                </f:facet>
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>
+
