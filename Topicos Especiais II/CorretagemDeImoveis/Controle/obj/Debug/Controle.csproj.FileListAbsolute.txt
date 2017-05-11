@@ -1,0 +1,7 @@
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\Controle\bin\Debug\Controle.dll
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\Controle\bin\Debug\Controle.pdb
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\Controle\bin\Debug\Modelo.dll
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\Controle\bin\Debug\Modelo.pdb
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\Controle\obj\Debug\Controle.csprojResolveAssemblyReference.cache
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\Controle\obj\Debug\Controle.dll
+C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\Controle\obj\Debug\Controle.pdb
