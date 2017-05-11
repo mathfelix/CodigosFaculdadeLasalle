@@ -1,5 +1,0 @@
-C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\Modelo\bin\Debug\Modelo.dll
-C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\Modelo\bin\Debug\Modelo.pdb
-C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
-C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\Modelo\obj\Debug\Modelo.dll
-C:\Users\mathe\Desktop\projetosC#\CorretagemDeImoveis\Modelo\obj\Debug\Modelo.pdb
